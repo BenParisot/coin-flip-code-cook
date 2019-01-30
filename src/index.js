@@ -1,13 +1,23 @@
 import catOrDog from './cat-or-dog.js';
 
 const pickForm = document.getElementById('pick-form');
+const image = document.getElementById('animal-pic');
 
 pickForm.addEventListener('submit', function(event){
     event.preventDefault();
     const randomNumber = Math.random();
-
     const animal = catOrDog(randomNumber);
-    console.log(animal);
+    let imageSource = '';
+
+    if(animal === 'cat') {
+        imageSource = '../assets/cat.jpg';
+    }
+    else {
+        imageSource = '../assets/dog.jpg';
+    }
+
+    image.src = imageSource;
+    image.classList.remove('hidden');
 
 });
 //grab form node from DOM
