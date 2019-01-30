@@ -4,10 +4,11 @@ const pickForm = document.getElementById('pick-form');
 const image = document.getElementById('animal-pic');
 const catNode = document.getElementById('cat-count');
 const dogNode = document.getElementById('dog-count');
+const radioForm = document.getElementById('radio-form');
+
 
 let catCount = 0;
 let dogCount = 0;
-
 
 pickForm.addEventListener('submit', function(event){
     event.preventDefault();
@@ -34,6 +35,14 @@ pickForm.addEventListener('submit', function(event){
 
 
 });
+
+
+radioForm.addEventListener('submit', function(event){
+    event.preventDefault();
+    console.log(radioForm.elements.side.value);
+
+});
+
 //grab form node from DOM
 
 //add event listener to form node
