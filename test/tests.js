@@ -1,17 +1,5 @@
 const test = QUnit.test;
-
-function catOrDog(randomNumber) {
-    let result = '';
-
-    if(randomNumber < 0.5) {
-        result = 'cat';
-    }
-    else {
-        result = 'dog';
-    }
-    return result;
-}
-
+import catOrDog from '../src/cat-or-dog.js';
 
 test('return cat if random number is less than 0.5', function(assert) {
     const randomNumber = 0.4;
